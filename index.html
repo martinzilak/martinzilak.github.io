@@ -88,8 +88,9 @@ The favicon comes from http://www.freepik.com/
 $(function(){
      $(window).resize(function(){
          if($(this).width() >= 767){
-             $.backstretch("background.jpg", {speed: 150});
-         }
+             $.backstretch("background.jpg");
+         }else{
+             $.backstretch("empty.png");}
       })
       .resize();//trigger resize on page load
 }); 
