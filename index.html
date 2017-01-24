@@ -1,20 +1,107 @@
+<!--
+This site is based on Naz Hamid's Personal Page project, which can be found here:
+https://github.com/weightshift/The-Personal-Page
+
+It's under MIT/GPL license.
+
+The favicon comes from http://www.freepik.com/
+-->
+
 <!doctype html>
 <html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="author" content="Martin Žilák">
-		<link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
-		<title>Martin Žilák</title>
-	</head>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Martin Zilak</title>
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta name="robots" content="all" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+	<style>
+		* { padding: 0; margin: 0; }
+        body { background-color: #5c824c; margin-bottom: 50px; font-family: Helvetica;}
+        h2 { color: rgba(255,255,255,0.95); font-size: 35px; font-weight: 100; margin-left: -2px;}
+		p { color: #fff; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+		a { color: #fff; font-weight: bold; text-decoration: none; padding-bottom: -1px !important; border-bottom: 1px solid rgba(255,255,255,0.3); }
+		#about { width: 400px; padding: 50px 0 0 30px; margin: 0 auto 0 50px !important;}
+        #about a:hover { text-decoration: none; color: #19a0d8; border-bottom: 1px solid rgba(255, 255, 255, 0.5); text-shadow: none; }
+		.photo { display: none; }
+        .tinylinks { display: none; }
+		
+        ul#connect{white-space:nowrap;width: 400px; padding: 5px 0 0 20px; margin: 0 auto 0 50px !important;}
+        #connect li{display:inline;list-style-type:none;}
+        #connect a{text-decoration: none; padding:3px 5px;border-style: none; opacity:0.8; -webkit-filter: brightness(0%) invert(1); filter: brightness(0%) invert(1);}
+        #connect a:hover{text-decoration: none;opacity:1;border-style: none; -webkit-filter: none; filter: none;}
+        #connect img {width:15%;border:none;}
+        
+        @media (max-width: 767px) { 
+			body { background-color: #5c824c; }
+			p { color: #fff;}
+			a { color: #fff;}
+            a:hover { color: #006e9c }
+			h2 { color: #fff; }
+			img { max-width: 100%; }
+            .photo { display: inherit; margin: -20px -20px 20px -20px !important; }
+			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
+			.backstretch { opacity: 0.2; }
+            ul#connect { display: none; }
+            .tinylinks { display: inherit; }
+		}
+	</style>
+</head>	
+    
+<body>
 
-	<body>
-		<div>
-			<h1 class="site-title"><span style="color: #ba699f;">zilak.sk</span></h1>
-		</div>
+<div id="about">
 
-            	<div class="footer">
-                	<p>&copy; 2012-2016 Martin Žilák</p>
-            	</div>
+    <p class="photo">
+		<img src="background.jpg">
+	</p>
 
-	</body>
+	<h2>Hi, I'm Martin.</h2><br>
+    
+    <p>I'm a <span id="age"></span> year old guy from Slovakia currently studying computer science at the <a href="http://www.fi.muni.cz/">Masaryk University</a> in Brno, Czech Republic.</p>
+    
+	<p>When I'm not playing around with computers, I'm probably spending my time either by reading a book or by cooking some food. If we're talking more time-demanding hobbies, it'd have to be traveling. I like that a lot. I'm also pretty good at lifting things, so sometimes I go to the gym to make this talent useful.</p>
+    
+	<p>If you'd like to know more about my skills, have a look at my <a href="resume.pdf">resume</a>. And if you want to get in touch with me, the best way is to send an e-mail my way at <a href="mailto:martin@zilak.sk">martin@zilak.sk</a>.</p> 
+    
+    <p class="tinylinks">I also have this professional <a href="https://www.linkedin.com/in/martinzilak">LinkedIn</a> thingy, but when things aren't so serious, it's better to look for me on <a href="https://www.facebook.com/martin.zilak">Facebook</a>. If you'd like to see my code, have a look at my <a href="https://www.github.com/tinnyx">GitHub</a>. When it comes to the aforementioned cooking, one of the biggest parts of that is posting the creations on <a href="https://www.instagr.am/supermroz">Instagram</a>. And when I listen to some music, it magically appears on my <a href="https://www.last.fm/user/tinnyx">Last.fm</a>.</p>
+</div>
+
+<ul id="connect">
+    <li><a href="https://www.linkedin.com/in/martinzilak" target="_blank"><img src="icons/linkedin.png"></a></li>
+    <li><a href="https://www.facebook.com/martin.zilak" target="_blank"><img src="icons/facebook.png"></a></li>
+    <li><a href="https://www.github.com/tinnyx" target="_blank"><img src="icons/github.png"></a></li>
+    <li><a href="https://www.instagr.am/supermroz" target="_blank"><img src="icons/instagram.png"></a></li>
+    <li><a href="https://www.last.fm/user/tinnyx" target="_blank"><img src="icons/lastfm.png"></a></li>
+</ul>
+
+<!--include jquery & backstretch-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+<script type="text/javascript">
+$(function(){
+     $(window).resize(function(){
+         if($(this).width() >= 767){
+             $.backstretch("background.jpg", {speed: 150});
+         }
+      })
+      .resize();//trigger resize on page load
+}); 
+</script>
+<script type="text/javascript">
+function _calculateAge() { // birthday is a date
+    var ageDifMs = Date.now() - new Date(1995,1,8);
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+$("#age").html(_calculateAge());
+</script>
+
+</body>	
 </html>
