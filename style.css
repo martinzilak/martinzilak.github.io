@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #052d45;
+    margin-bottom: 50px;
+    font-family: Helvetica;
+}
+
+h2 {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 35px;
+    font-weight: 100;
+    margin-left: -2px;
+}
+
+p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 22px;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding-bottom: -1px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#about {
+    width: 400px;
+    padding: 50px 0 0 30px;
+    margin: 0 auto 0 50px !important;
+}
+
+#about a:hover {
+    text-decoration: none;
+    color: #19a0d8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    text-shadow: none;
+}
+
+.photo {
+    display: none;
+}
+
+.tinylinks {
+    display: none;
+}
+
+ul#connect {
+    white-space: nowrap;
+    width: 400px;
+    padding: 5px 0 0 20px;
+    margin: 0 auto 0 50px !important;
+}
+
+#connect li {
+    display: inline;
+    list-style-type: none;
+}
+
+#connect a {
+    text-decoration: none;
+    padding: 3px 5px;
+    border-style: none;
+    opacity: 0.8;
+    -webkit-filter: brightness(0%) invert(1);
+    filter: brightness(0%) invert(1);
+}
+
+#connect a:hover {
+    text-decoration: none;
+    opacity: 1;
+    border-style: none;
+    -webkit-filter: none;
+    filter: none;
+}
+
+#connect img {
+    width: 15%;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    body {
+        background-color: #052d45;
+    }
+
+    p {
+        color: #fff;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    a:hover {
+        color: #006e9c
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .photo {
+        display: inherit;
+        margin: -20px -20px 20px -20px !important;
+    }
+
+    #about {
+        position: relative;
+        width: auto;
+        padding: 20px;
+        margin: 0 !important;
+    }
+
+    .backstretch {
+        opacity: 0.2;
+    }
+
+    ul#connect {
+        display: none;
+    }
+
+    .tinylinks {
+        display: inherit;
+    }
+}
