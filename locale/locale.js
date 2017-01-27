@@ -2,7 +2,7 @@ $('#selectLanguageDropdown').localizationTool({
     'defaultLanguage': 'en_US', /* (optional) although must be defined if you don't want en_GB */
     'showFlag': true, /* (optional) show/hide the flag */
     'showCountry': false, /* (optional) show/hide the country name */
-    'showLanguage': false,
+    'showLanguage': true,
 
     /*
      * Translate your strings below

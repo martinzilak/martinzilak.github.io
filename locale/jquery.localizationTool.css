@@ -89,6 +89,9 @@
 .localizationTool li:hover {
   background: #41adeb;
 }
+.localizationTool li:hover .ltool-language-name {
+    color: #f5f1d6;
+}
 .localizationTool img {
   width: 16px;
   height: 11px;

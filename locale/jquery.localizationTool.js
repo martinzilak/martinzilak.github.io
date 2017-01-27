@@ -135,7 +135,7 @@
                 var hasCountryClass = haveCountry ? 'ltool-has-country ' : "";
                 languageReplacement = [
                     '<span class="', hasCountryClass, 'ltool-language-name">',
-                    '$1' + languageName.replace(/[$]/g, '&#36;') + '$2' ,
+                    languageName.replace(/[$]/g, '&#36;'),
                     '</span>'
                 ].join('');
             }
