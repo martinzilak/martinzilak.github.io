@@ -45,6 +45,14 @@ a {
     text-shadow: none;
 }
 
+#selectLanguageDropdown {
+    width: 75px;
+    margin: 0;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+}
+
 .photo {
     display: none;
 }
@@ -122,6 +130,14 @@ ul#connect {
         width: auto;
         padding: 20px;
         margin: 0 !important;
+    }
+
+    #selectLanguageDropdown {
+        width: 70px;
+        margin: 0;
+        position: fixed;
+        left: 20px;
+        top: 20px;
     }
 
     .backstretch {

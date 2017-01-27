@@ -943,266 +943,13 @@
         'init' : function(options) {
             // NOTE: "country" is optional
             var knownLanguages = {
-                'en_GB' : {
-                    'country' : 'United Kingdom',
-                    'language': 'English',
-                    'countryTranslated' : 'United Kingdom',
-                    'languageTranslated': 'English',
-                    'flag': {
-                        'class' : 'flag flag-gb'
-                    }
-                },
                 'en_US' : {
-                    'country' : 'United States of America',
+                    'country': 'United States of America',
                     'language': 'English',
-                    'countryTranslated' : 'United States of America',
+                    'countryTranslated': 'United States of America',
                     'languageTranslated': 'English',
                     'flag': {
-                        'class' : 'flag flag-us'
-                    }
-                },
-                'de_DE' : {
-                    'country' : 'Germany',
-                    'language' : 'German',
-                    'countryTranslated' : 'Deutschland',
-                    'languageTranslated' : 'Deutsch',
-                    'flag' : {
-                        'class' : 'flag flag-de'
-                    }
-                },
-                'es_ES' : {
-                    'country' : 'Spain',
-                    'language' : 'Spanish',
-                    'countryTranslated': 'España',
-                    'languageTranslated' : 'Español',
-                    'flag' : {
-                        'class' : 'flag flag-es'
-                    }
-                },
-                'fr_FR' : {
-                    'country' : 'France',
-                    'language' : 'French',
-                    'countryTranslated' : 'France',
-                    'languageTranslated' : 'Français',
-                    'flag' : {
-                        'class' : 'flag flag-fr'
-                    }
-                },
-                'ko_KR' : {
-                    'country' : 'Korea, Republic of.',
-                    'language' : 'Korean',
-                    'countryTranslated' : '대한민국',
-                    'languageTranslated' : '한국어',
-                    'flag' : {
-                        'class' : 'flag flag-kr'
-                    }
-                },
-                'pt_BR' : {
-                    'country' : 'Brazil',
-                    'language' : 'Portuguese',
-                    'countryTranslated': 'Brasil',
-                    'languageTranslated' : 'Português',
-                    'flag' : {
-                        'class' : 'flag flag-br'
-                    }
-                },
-                'en_AU' : {
-                    'country' : 'Australia',
-                    'language' : 'English',
-                    'countryTranslated' : 'Australia',
-                    'languageTranslated' : 'English',
-                    'flag' : {
-                        'class' : 'flag flag-au'
-                    }
-                },
-                'en_IN' : {
-                    'country' : 'India',
-                    'language' : 'English',
-                    'countryTranslated': 'India',
-                    'languageTranslated': 'English',
-                    'flag': {
-                        'class' : 'flag flag-in'
-                    }
-                },
-                'it_IT' : {
-                    'country' : 'Italy',
-                    'language': 'Italian',
-                    'countryTranslated': 'Italia',
-                    'languageTranslated': 'Italiano',
-                    'flag' : {
-                        'class' : 'flag flag-it'
-                    }
-                },
-                'jp_JP' : {
-                    'country' : 'Japan',
-                    'language': 'Japanese',
-                    'countryTranslated': '日本',
-                    'languageTranslated': '日本語',
-                    'flag' : {
-                        'class' : 'flag flag-jp'
-                    }
-                },
-                'ar_TN' : {
-                    'country' : 'Tunisia',
-                    'language' : 'Arabic',
-                    'countryTranslated': 'تونس',
-                    'languageTranslated': 'عربي',
-                    'cssDirection': 'rtl',
-                    'flag' : {
-                        'class' : 'flag flag-tn'
-                    }
-                },
-                'el_GR' : {
-                    'country': 'Greece',
-                    'language': 'Greek',
-                    'countryTranslated': 'Ελλάδα',
-                    'languageTranslated' : 'Ελληνικά',
-                    'flag' : {
-                        'class' : 'flag flag-gr'
-                    }
-                },
-                'en_IE' : {
-                    'country': 'Ireland',
-                    'language': 'English',
-                    'countryTranslated': 'Ireland',
-                    'languageTranslated' : 'English',
-                    'flag' : {
-                        'class' : 'flag flag-ie'
-                    }
-                },
-                'nl_NL': {
-                    'country' : 'Netherlands',
-                    'language': 'Dutch',
-                    'countryTranslated' : 'Nederland',
-                    'languageTranslated' : 'Nederlands',
-                    'flag' : {
-                        'class' : 'flag flag-nl'
-                    }
-                },
-                'zh_CN': {
-                    'country' : 'China',
-                    'language' : 'Simplified Chinese',
-                    'countryTranslated': '中国',
-                    'languageTranslated': '简体中文',
-                    'flag' : {
-                        'class' : 'flag flag-cn'
-                    }
-                },
-                'zh_TW': {
-                    'country' : 'Taiwan',
-                    'language' : 'Traditional Chinese',
-                    'countryTranslated': '臺灣',
-                    'languageTranslated': '繁體中文',
-                    'flag' : {
-                        'class' : 'flag flag-tw'
-                    }
-                },
-                'fi_FI': {
-                    'country' : 'Finland',
-                    'language' : 'Finnish',
-                    'countryTranslated' : 'Suomi',
-                    'languageTranslated' : 'Suomi',
-                    'flag' : {
-                        'class' : 'flag flag-fi'
-                    }
-                },
-                'pt_PT' : {
-                    'country' : 'Portugal',
-                    'language' : 'Portuguese',
-                    'countryTranslated': 'Portugal',
-                    'languageTranslated' : 'Português',
-                    'flag' : {
-                        'class' : 'flag flag-pt'
-                    }
-                },
-                'pl_PL': {
-                    'country' : 'Poland',
-                    'language': 'Polish',
-                    'countryTranslated' : 'Polska',
-                    'languageTranslated': 'Polski',
-                    'flag' : {
-                        'class' : 'flag flag-pl'
-                    }
-                },
-                'ru_RU': {
-                    'country' : 'Russia',
-                    'language' : 'Russian',
-                    'languageTranslated': 'Русский',
-                    'countryTranslated' : 'Россия',
-                    'flag': {
-                        'class': 'flag flag-ru'
-                    }
-                },
-                'hi_IN': {
-                    'country' : 'India',
-                    'language': 'Hindi',
-                    'countryTranslated': 'भारत',
-                    'languageTranslated': 'हिन्द',
-                    'flag': {
-                        'class': 'flag flag-in'
-                    }
-                },
-                'ta_IN': {
-                    'country' : 'India',
-                    'language': 'Tamil',
-                    'countryTranslated': 'இந்தியா',
-                    'languageTranslated': 'தமிழ்',
-                    'flag': {
-                        'class': 'flag flag-in'
-                    }
-                },
-                'ml_IN': {
-                    'country' : 'India',
-                    'language': 'Malayalam',
-                    'countryTranslated': 'ഇന്ത്യ',
-                    'languageTranslated': 'മലയാളം',
-                    'flag': {
-                        'class': 'flag flag-in'
-                    }
-                },
-                'tr_TR': {
-                    'country' : 'Turkey',
-                    'language' : 'Turkish',
-                    'countryTranslated': 'Türkiye',
-                    'languageTranslated': 'Türkçe',
-                    'flag': {
-                        'class': 'flag flag-tr'
-                    }
-                },
-                'he_IL': {
-                    'country' : 'Israel',
-                    'language' : 'Hebrew',
-                    'countryTranslated' : 'מדינת ישראל',
-                    'languageTranslated': 'עברית',
-                    'cssDirection': 'rtl',
-                    'flag': {
-                        'class': 'flag flag-il'
-                    }
-                },
-                'da_DK' : {
-                    'country' : 'Denmark',
-                    'language' : 'Danish',
-                    'countryTranslated': 'Danmark',
-                    'languageTranslated': 'Dansk',
-                    'flag' : {
-                        'class': 'flag flag-dk'
-                    }
-                },
-                'ro_RO': {
-                    'country' : 'Romania',
-                    'language' : 'Romanian',
-                    'countryTranslated': 'România',
-                    'languageTranslated': 'Român',
-                    'flag' : {
-                        'class': 'flag flag-ro'
-                    }
-                },
-                'eo' : {
-                    // NOTE: no country
-                    'language' : 'Esperanto',
-                    'languageTranslated' : 'Esperanto',
-                    'flag' : {
-                        'class': 'flag flag-esperanto'
+                        'class': 'flag flag-us'
                     }
                 },
                 'sk_SK': {
@@ -1213,11 +960,20 @@
                     'flag' : {
                         'class': 'flag flag-sk'
                     }
+                },
+                'cs_CZ': {
+                    'country' : 'Czech Republic',
+                    'language' : 'Czech',
+                    'countryTranslated': 'Česko',
+                    'languageTranslated': 'Čeština',
+                    'flag' : {
+                        'class': 'flag flag-cz'
+                    }
                 }
             };
 
             var settings = $.extend({
-                'defaultLanguage' : 'en_GB',
+                'defaultLanguage' : 'en_US',
                 /* do not throw error if a selector doesn't match */
                 'ignoreUnmatchedSelectors': false,
                 /* show the flag on the widget */

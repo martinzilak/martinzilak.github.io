@@ -4,16 +4,18 @@ https://github.com/weightshift/The-Personal-Page
 
 It's under MIT/GPL license.
 
+It's using a modified version of jquery.localizationTool.js for localization. The original can be found here:
+https://github.com/darksmo/jquery-localization-tool
+
 The favicon comes from http://www.freepik.com/
 -->
 
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="google-site-verification" content="3oLCfrRw_sP6P9FW9He02B3ecZEoAX4R34VM_7JRArE"/>
-    <meta name="Description"
-          content="Hi, I'm Martin. If you'd like to get to know me a bit, this'd probably be a good place to start. Oh, and there's also a big photo of me. Convinced yet?"/>
+    <meta name="Description" content="Hi, I'm Martin. If you'd like to get to know me a bit, this'd probably be a good place to start. Oh, and there's also a big photo of me. Convinced yet?"/>
     <meta name="Keywords" content="martin zilak, tinnyx, zilak"/>
     <title>Martin Zilak</title>
     <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon"/>
@@ -26,6 +28,7 @@ The favicon comes from http://www.freepik.com/
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="locale/jquery.localizationTool.css">
 
     <script type="text/javascript">
         (function (i, s, o, g, r, a, m) {
@@ -47,69 +50,57 @@ The favicon comes from http://www.freepik.com/
 
 <body>
 
-<div id="about">
+    <div id="about">
 
-    <p class="photo">
-        <img src="background.jpg">
-    </p>
+        <p class="photo">
+            <img src="background.jpg">
+        </p>
 
-    <h2>Hi, I'm Martin.</h2><br>
+        <div id="selectLanguageDropdown" class="localizationTool"></div>
 
-    <p>I'm a <span id="age"></span> year old guy from Slovakia currently studying computer science at the <a
-            href="http://www.fi.muni.cz/">Masaryk University</a> in Brno, Czech Republic.</p>
+        <h2 id="hi">Hi, I'm Martin.</h2><br>
 
-    <p>When I'm not playing around with computers, I'm probably spending my time either by reading a book or by cooking
-        some food. If we're talking more time-demanding hobbies, it'd have to be traveling. I like that a lot. I'm also
-        pretty good at lifting things, so sometimes I go to the gym to make this talent useful.</p>
+        <p><span id="im">I'm a</span> <span id="age"></span> <span id="year">year old guy from Slovakia currently studying computer science at the</span> <a id="masaryk" href="http://www.fi.muni.cz/">Masaryk University</a> <span id="brno">in Brno, Czech Republic.</span></p>
 
-    <p>If you'd like to know more about my skills, have a look at my <a href="resume.pdf">resume</a>. And if you want to
-        get in touch with me, the best way is to send an e-mail my way at <a href="mailto:martin@zilak.sk">martin@zilak.sk</a>.
-    </p>
+        <p id="p2">When I'm not playing around with computers, I'm probably spending my time either by reading a book or by cooking some food. If we're talking more time-demanding hobbies, it'd have to be traveling. I like that a lot. I'm also pretty good at lifting things, so sometimes I go to the gym to make this talent useful.</p>
 
-    <p class="tinylinks">I also have this professional <a href="https://www.linkedin.com/in/martinzilak">LinkedIn</a>
-        thingy, but when things aren't so serious, it's better to look for me on <a
-                href="https://www.facebook.com/martin.zilak">Facebook</a>. If you'd like to see my code, have a look at
-        my <a href="https://www.github.com/tinnyx">GitHub</a>. When it comes to the aforementioned cooking, one of the
-        biggest parts of that is posting the creations on <a href="https://www.instagr.am/supermroz">Instagram</a>. And
-        when I listen to some music, it magically appears on my <a href="https://www.last.fm/user/tinnyx">Last.fm</a>.
-    </p>
-</div>
+        <p><span id="more">If you'd like to know more about my skills, have a look at my</span> <a id="cv" href="resume.pdf">resume</a>. <span id="touch">And if you want to get in touch with me, the best way is to send an e-mail my way at</span> <a href="mailto:martin@zilak.sk">martin@zilak.sk</a>.</p>
 
-<ul id="connect">
-    <li><a href="https://www.linkedin.com/in/martinzilak" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-    </li>
-    <li><a href="https://www.facebook.com/martin.zilak" target="_blank"><img src="icons/facebook.png"
-                                                                             alt="Facebook"></a></li>
-    <li><a href="https://www.github.com/tinnyx" target="_blank"><img src="icons/github.png" alt="GitHub"></a></li>
-    <li><a href="https://www.instagr.am/supermroz" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
-    </li>
-    <li><a href="https://www.last.fm/user/tinnyx" target="_blank"><img src="icons/lastfm.png" alt="Last.fm"></a></li>
-</ul>
+        <p class="tinylinks"><span id="linkedin">I also have this professional</span> <a href="https://www.linkedin.com/in/martinzilak">LinkedIn</a><span id="facebook"> thingy, but when things aren't so serious, it's better to look for me on</span> <a href="https://www.facebook.com/martin.zilak">Facebook</a>. <span id="github">If you'd like to see my code, have a look at my</span> <a href="https://www.github.com/tinnyx">GitHub</a><span id="instagram">. When it comes to the aforementioned cooking, one of the biggest parts of that is posting the creations on</span> <a href="https://www.instagr.am/supermroz">Instagram</a>. <span id="lastfm">And when I listen to some music, it magically appears on my</span> <a href="https://www.last.fm/user/tinnyx">Last.fm</a>.</p>
+    </div>
 
-<!--include jquery & backstretch-->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $(window).resize(function () {
-            if ($(this).width() >= 767) {
-                $.backstretch("background.jpg");
-            } else {
-                $.backstretch("empty.png");
-            }
-        })
-            .resize();//trigger resize on page load
-    });
-</script>
-<script type="text/javascript">
-    function _calculateAge() { // birthday is a date
-        var ageDifMs = Date.now() - new Date(1995, 1, 8);
-        var ageDate = new Date(ageDifMs); // miliseconds from epoch
-        return Math.abs(ageDate.getUTCFullYear() - 1970);
-    }
-    $("#age").html(_calculateAge());
-</script>
+    <ul id="connect">
+        <li><a href="https://www.linkedin.com/in/martinzilak" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a></li>
+        <li><a href="https://www.facebook.com/martin.zilak" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a></li>
+        <li><a href="https://www.github.com/tinnyx" target="_blank"><img src="icons/github.png" alt="GitHub"></a></li>
+        <li><a href="https://www.instagr.am/supermroz" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.last.fm/user/tinnyx" target="_blank"><img src="icons/lastfm.png" alt="Last.fm"></a></li>
+    </ul>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="locale/jquery.localizationTool.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(window).resize(function () {
+                if ($(this).width() >= 767) {
+                    $.backstretch("background.jpg");
+                } else {
+                    $.backstretch("empty.png");
+                }
+            })
+                .resize();//trigger resize on page load
+        });
+    </script>
+    <script type="text/javascript">
+        function _calculateAge() { // birthday is a date
+            var ageDifMs = Date.now() - new Date(1995, 1, 8);
+            var ageDate = new Date(ageDifMs); // miliseconds from epoch
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }
+        $("#age").html(_calculateAge());
+    </script>
+    <script type="text/javascript" src="locale/locale.js"></script>
 
 </body>
 </html>
