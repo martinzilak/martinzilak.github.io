@@ -121,6 +121,7 @@ ul#connect {
     }
 
     .photo {
+        padding-top: 42px;
         display: inherit;
         margin: -20px -20px 20px -20px !important;
     }
