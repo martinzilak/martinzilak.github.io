@@ -34,15 +34,15 @@
   height: 0;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid #deedf7;
+  border-bottom: 10px solid #052d45;
   border-right: 10px solid transparent;
   position: absolute;
   right: 8px;
   top: 7px;
 }
 .localizationTool {
-  color: #000000;
-  background: #4096d3;
+  color: #ffffff;
+  background: rgba(255,255,255,0.75);
   position: relative;
 }
 .localizationTool .ltool-dropdown-label {
@@ -57,7 +57,7 @@
   margin-left: 0;
 }
 .localizationTool .ltool-dropdown-label .ltool-language-name {
-  color: #f5f1d6;
+  color: #052d45;
 }
 .localizationTool .ltool-dropdown-label-arrow {
   /* the arrow */
@@ -66,7 +66,7 @@
   display: block;
   width: 0;
   height: 0;
-  border-top: 10px solid #f5f1d6;
+  border-top: 10px solid #052d45;
   border-left: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-right: 10px solid transparent;
@@ -80,24 +80,24 @@
 }
 .localizationTool li {
   display: block;
-  background: #ffffff;
+  background: rgba(255,255,255,0.75);
   padding: 5px;
 }
 .localizationTool li.ltool-is-selected {
-  background: #ffffff;
+  background: rgba(255,255,255,0.75);
 }
 .localizationTool li:hover {
-  background: #41adeb;
+  background: rgba(5,65,49,0.75);
 }
 .localizationTool li:hover .ltool-language-name {
-    color: #f5f1d6;
+    color: #ffffff;
 }
 .localizationTool img {
   width: 16px;
   height: 11px;
 }
 .localizationTool .ltool-language-name {
-  color: #19a0d8;
+  color: #052d45;
 }
 .localizationTool .ltool-language-flag {
   display: block;
