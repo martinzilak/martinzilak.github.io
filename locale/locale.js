@@ -33,7 +33,7 @@ $('#selectLanguageDropdown').localizationTool({
         },
 
         'id:more': {
-            'sk_SK': 'Ak chceš vedieť viac o mojich schopnostiach, pozri si môj'
+            'sk_SK': 'Ak chceš o mojich schopnostiach vedieť viac, pozri si môj'
         },
 
         'id:cv': {
