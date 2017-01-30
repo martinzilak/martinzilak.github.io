@@ -61,38 +61,75 @@ a {
     display: none;
 }
 
-ul#connect {
-    white-space: nowrap;
+.icon {
+    background-image: url(icon.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.facebook {
+    background-position: -63px -1px;
+}
+
+.facebook:hover {
+    background-position: -1px -1px;
+}
+
+.github {
+    background-position: -187px -1px;
+}
+
+.github:hover {
+    background-position: -125px -1px;
+}
+
+.instagram {
+    background-position: -311px -1px;
+}
+
+.instagram:hover {
+    background-position: -249px -1px;
+}
+
+.lastfm {
+    background-position: -435px -1px;
+}
+
+.lastfm:hover {
+    background-position: -373px -1px;
+}
+
+.linkedin {
+    background-position: -559px -1px;
+}
+
+.linkedin:hover {
+    background-position: -497px -1px;
+}
+
+ul#icons {
     width: 400px;
-    padding: 5px 0 0 20px;
-    margin: 0 auto 0 50px !important;
+    margin: 0 auto 0 70px !important;
 }
 
-#connect li {
-    display: inline;
+#icons li {
+    display: inline-block;
     list-style-type: none;
+    padding: 0 0 0 10px;
 }
 
-#connect a {
+#icons a {
     text-decoration: none;
-    padding: 3px 5px;
     border-style: none;
     opacity: 0.8;
-    -webkit-filter: brightness(0%) invert(1);
-    filter: brightness(0%) invert(1);
 }
 
-#connect a:hover {
+#icons a:hover {
     text-decoration: none;
-    opacity: 1;
     border-style: none;
-    -webkit-filter: none;
-    filter: none;
-}
-
-#connect img {
-    width: 15%;
-    border: none;
+    opacity: 0.9;
 }
 
 @media (max-width: 767px) {
@@ -146,7 +183,7 @@ ul#connect {
         opacity: 0.2;
     }
 
-    ul#connect {
+    ul#icons {
         display: none;
     }
 
