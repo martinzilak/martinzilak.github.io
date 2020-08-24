@@ -1,106 +1,71 @@
-<!--
-This site is based on Naz Hamid's Personal Page project, which can be found here:
-https://github.com/weightshift/The-Personal-Page
-
-It's under MIT/GPL license.
-
-It's using a modified version of jquery.localizationTool.js for localization. The original can be found here:
-https://github.com/darksmo/jquery-localization-tool
-
-The favicon comes from http://www.freepik.com/
--->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="google-site-verification" content="3oLCfrRw_sP6P9FW9He02B3ecZEoAX4R34VM_7JRArE"/>
-    <meta name="Description" content="Hi, I'm Martin. If you'd like to get to know me a bit, this probably is a good place to start. Oh, and you'll also get to see a big photo of me. Convinced yet?"/>
-    <meta name="Keywords" content="martin zilak, tinnyx, zilak, zilak sk, martin zilak sk, tinnyx sk"/>
-    <title>Martin Zilak</title>
-    <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon"/>
-    <meta http-equiv="pragma" content="no-cache"/>
-    <meta name="robots" content="all"/>
-    <meta name="MSSmartTagsPreventParsing" content="true"/>
-    <meta http-equiv="imagetoolbar" content="false"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="locale/jquery.localizationTool.css">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta name="google-site-verification" content="3oLCfrRw_sP6P9FW9He02B3ecZEoAX4R34VM_7JRArE"/>
+		<meta name="Description" content="Hi, I'm Martin. If you'd like to get to know me a bit, this probably is a good place to start. Oh, and you'll also get to see a big photo of me. Convinced yet?"/>
+		<meta name="Keywords" content="martin zilak, tinnyx, zilak, zilak sk, martin zilak sk, tinnyx sk"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="all"/>
 
-    <script type="text/javascript">
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		<title>Martin Zilak</title>
 
-        ga('create', 'UA-90800769-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-</head>
+		<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon"/>
 
-<body>
+		<link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
+		<link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
 
-    <div id="about">
+		<script type="text/javascript">
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+						m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        <div id="selectLanguageDropdown" class="localizationTool"></div>
+			ga('create', 'UA-90800769-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<main>
+			<div class="top">
+				<span id="intro">
+					Hi, I'm Martin!
+				</span>
+			</div>
+			<div class="bottom">
+				<span id="tagline" class="tagline">
+					A software developer from Slovakia
+				</span>
+				<div class="icons-social">
+					<a target="_blank" href="mailto:martin@zilak.sk"><i class="fas fa-envelope"></i></a>
+					<a target="_blank" href="https://github.com/tinnyx"><i class="fab fa-github"></i></a>
+					<a target="_blank" href="https://www.linkedin.com/in/martinzilak"><i class="fab fa-linkedin"></i></a>
+				</div>
+				<span id="cv-text" class="resume">Have a look at my</span>
+				<span>
+					<a id="cv-link" class="resume" target="_blank" href="resume.pdf">
+						resume
+					</a>
+				</span>
+			</div>
+		</main>
 
-        <p class="photo">
-            <img src="background.jpg">
-        </p>
-
-        <h2 id="hi">Hi, I'm Martin.</h2><br>
-
-        <p><span id="im">I'm a</span> <span id="age"></span> <span id="year">year old guy from Slovakia currently studying computer science at the</span> <a id="masaryk" href="http://www.fi.muni.cz/">Masaryk University</a> <span id="brno">in Brno, Czech Republic.</span></p>
-
-        <p id="p2">When I'm not playing around with computers, I'm probably spending my time either by reading a book or by cooking some food. If we're talking more time-demanding hobbies, it'd have to be traveling. I like that a lot. I'm also pretty good at lifting things, so sometimes I go to the gym to make this talent useful.</p>
-
-        <p><span id="more">If you'd like to know more about my skills, have a look at my</span> <a id="cv" href="resume.pdf">resume</a>. <span id="touch">And if you want to get in touch with me, the best way is to send an e-mail my way at</span> <a href="mailto:martin@zilak.sk">martin@zilak.sk</a>.</p>
-
-        <p class="tinylinks"><span id="linkedin">I also have this professional</span> <a href="https://www.linkedin.com/in/martinzilak">LinkedIn</a><span id="facebook"> thingy, but when things aren't so serious, it's better to look for me on</span> <a href="https://www.facebook.com/martin.zilak">Facebook</a>. <span id="github">If you'd like to see my code, have a look at my</span> <a href="https://www.github.com/tinnyx">GitHub</a><span id="instagram">. When it comes to the aforementioned cooking, one of the biggest parts of that is posting the creations on</span> <a href="https://www.instagr.am/supermroz">Instagram</a>. <span id="lastfm">And when I listen to some music, it magically appears on my</span> <a href="https://www.last.fm/user/tinnyx">Last.fm</a>.</p>
-    </div>
-
-    <ul id="icons">
-        <li><a href="https://www.linkedin.com/in/martinzilak" target="_blank" class="icon linkedin"></a></li>
-        <li><a href="https://www.facebook.com/martin.zilak" target="_blank" class="icon facebook"></a></li>
-        <li><a href="https://www.github.com/tinnyx" target="_blank" class="icon github"></a></li>
-        <li><a href="https://www.instagr.am/supermroz" target="_blank" class="icon instagram"></a></li>
-        <li><a href="https://www.last.fm/user/tinnyx" target="_blank" class="icon lastfm"></a></li>
-    </ul>
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-    <script type="text/javascript" src="locale/jquery.localizationTool.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $(window).resize(function () {
-                if ($(this).width() >= 767) {
-                    $.backstretch("background.jpg");
-                } else {
-                    $.backstretch("empty.png");
-                }
-            })
-                .resize();//trigger resize on page load
-        });
-    </script>
-    <script type="text/javascript">
-        function _calculateAge() { // birthday is a date
-            var ageDifMs = Date.now() - new Date(1995, 1, 8);
-            var ageDate = new Date(ageDifMs); // miliseconds from epoch
-            return Math.abs(ageDate.getUTCFullYear() - 1970);
-        }
-        $("#age").html(_calculateAge());
-    </script>
-    <script type="text/javascript" src="locale/locale.js"></script>
-
-</body>
+		<script type="text/javascript">
+			const lang = `${navigator.language}`.toLocaleLowerCase();
+			if (lang === 'sk-sk' || lang === 'cs-cz') {
+				document.getElementById('intro').innerHTML = 'Ahoj, som Martin!';
+				document.getElementById('tagline').innerHTML = 'Programátor zo Slovenska';
+				document.getElementById('cv-text').innerHTML = 'Pozri si môj';
+				document.getElementById('cv-link').innerHTML = 'životopis';
+			}
+		</script>
+	</body>
 </html>
