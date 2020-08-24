@@ -111,13 +111,24 @@ main {
 	background-color: #052d45;
 	background-image: url('background.jpg');
 	background-size: cover;
-	background-position: 75% 30%;
+	background-position: 75% 40%;
 	color: #FAFAFA;
+}
+
+.top, .bottom {
+	padding: 10px;
+	border: none;
+	border-radius: 0;
+	background-size: 50% 75%;
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media all and (orientation: portrait) {
 	main {
 		height: 100%;
+	}
+	.top, .bottom {
+		width: 90%;
 	}
 }
 
@@ -125,15 +136,9 @@ main {
 	main {
 		width: 100%;
 	}
-}
-
-.top, .bottom {
-	width: 50%;
-	padding: 10px;
-	border: none;
-	border-radius: 0;
-	background-size: 50% 75%;
-	background-color: rgba(0, 0, 0, 0.4);
+	.top, .bottom {
+		width: 50%;
+	}
 }
 
 .icons-social a {
